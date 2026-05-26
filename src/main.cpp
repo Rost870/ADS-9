@@ -56,9 +56,9 @@ int main() {
     auto t5 = std::chrono::high_resolution_clock::now();
 
     typedef std::chrono::microseconds us_t;
-    long d1 = std::chrono::duration_cast<us_t>(t1 - t0).count();
-    long d2 = std::chrono::duration_cast<us_t>(t3 - t2).count();
-    long d3 = std::chrono::duration_cast<us_t>(t5 - t4).count();
+    int64_t d1 = std::chrono::duration_cast<us_t>(t1 - t0).count();
+    int64_t d2 = std::chrono::duration_cast<us_t>(t3 - t2).count();
+    int64_t d3 = std::chrono::duration_cast<us_t>(t5 - t4).count();
 
     std::cout << n << "\t" << d1 << "\t\t"
               << d2 << "\t\t" << d3 << "\n";
